@@ -246,7 +246,7 @@ def load_data():
 
 data = load_data()
 meta = data["model_metadata"]
-trend = pd.DataFrame(data["trend_data"])
+trend = pd.DataFrame(data["trend_by_year"])
 fi = pd.DataFrame(data["feature_importance"])
 
 # ─── HELPERS ───────────────────────────────────────────
@@ -831,7 +831,7 @@ elif st.session_state.page == "Info Model":
     with c1: st.markdown(mcard("R2 Score", f"{meta['metrics']['r2_score']:.4f}"), unsafe_allow_html=True)
     with c2: st.markdown(mcard("MAE", f"{meta['metrics']['mae']:.4f}"), unsafe_allow_html=True)
     with c3: st.markdown(mcard("Akurasi Klasifikasi", f"{meta['metrics']['classification_accuracy']:.4f}"), unsafe_allow_html=True)
-    with c4: st.markdown(mcard("Data Terlatih", f"{meta['dataset_summary']['modeling_rows']}"), unsafe_allow_html=True)
+    with c4: st.markdown(mcard("Data Terlatih", f"{meta['dataset_summary']['modeling_rows_after_dedup']}"), unsafe_allow_html=True)
 
     st.markdown("<hr class='custom-divider' />", unsafe_allow_html=True)
 
@@ -895,7 +895,7 @@ elif st.session_state.page == "Info Model":
     st.markdown('<div class="card"><h3 class="card-title">Dataset & Tren Historis</h3>', unsafe_allow_html=True)
     st.markdown(f'''<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.75rem;margin-bottom:1.5rem">
         {mcard("Data Mentah", f"{meta['dataset_summary']['raw_rows']} baris")}
-        {mcard("Data Modeling", f"{meta['dataset_summary']['modeling_rows']} baris")}
+        {mcard("Data Modeling", f"{meta['dataset_summary']['modeling_rows_after_dedup']} baris")}
         {mcard("Tahun Terakhir", meta['dataset_summary']['latest_year'])}
         {mcard("Tipe Proyek", meta.get('model_type','-'))}
     </div>''', unsafe_allow_html=True)
@@ -980,7 +980,7 @@ elif st.session_state.page == "Admin":
         c1, c2, c3, c4 = st.columns(4)
         with c1: st.markdown(mcard("Total File", str(len(files))), unsafe_allow_html=True)
         with c2: st.markdown(mcard("Total Baris", f"{tr:,}"), unsafe_allow_html=True)
-        with c3: st.markdown(mcard("Dataset Asli", f"{meta['dataset_summary']['modeling_rows']} baris"), unsafe_allow_html=True)
+        with c3: st.markdown(mcard("Dataset Asli", f"{meta['dataset_summary']['modeling_rows_after_dedup']} baris"), unsafe_allow_html=True)
         with c4: st.markdown(mcard("Akurasi Model", f"{meta['metrics']['classification_accuracy']:.2%}"), unsafe_allow_html=True)
         st.markdown(f'''<div style="margin-top:1rem;padding:1rem;background:#f8fafc;border-radius:12px">
             <p style="font-weight:600;font-size:0.875rem">Informasi Admin</p>
