@@ -1,0 +1,189 @@
+{
+    "model_metadata": {
+        "project_title": "Prediksi Kondisi Sosial Provinsi Jawa Barat",
+        "model_type": "Supervised Learning",
+        "tasks": {
+            "regression": "Prediksi persentase kemiskinan",
+            "classification": "Klasifikasi prioritas intervensi sosial"
+        },
+        "best_models": {
+            "regression": "RandomForestRegressor",
+            "classification": "SVC"
+        },
+        "metrics": {
+            "r2_score": 0.9583563517123204,
+            "mae": 0.04885804822142923,
+            "rmse": 0.07869105041101396,
+            "classification_accuracy": 0.9006622516556292,
+            "precision_weighted": 0.9175153505110654,
+            "recall_weighted": 0.9006622516556292,
+            "f1_weighted": 0.8956706627788306
+        },
+        "feature_columns": [
+            "gini_ratio",
+            "tingkat_penganggur_terbuka",
+            "rata_rata_inflasi_tahunan",
+            "indeks_pembangunan_manusia"
+        ],
+        "priority_thresholds": {
+            "low_threshold": 7.46,
+            "high_threshold": 7.88
+        },
+        "dataset_summary": {
+            "raw_rows": 1511,
+            "clean_rows": 1511,
+            "modeling_rows_after_dedup": 1507,
+            "test_rows": 453,
+            "latest_year": 2024
+        },
+        "preprocessing_improvement": [
+            "Mengubah nilai numerik yang salah terbaca sebagai tanggal menjadi angka desimal.",
+            "Menskalakan nilai inflasi dan gini ratio yang salah format.",
+            "Menghapus duplikasi fitur-target sebelum train-test split untuk mengurangi data leakage.",
+            "Membatasi kompleksitas Random Forest agar hasil evaluasi lebih realistis dan tidak 1.0000."
+        ],
+        "limitations": [
+            "Dataset bersifat agregat dan beberapa target masih berulang pada banyak observasi.",
+            "Model digunakan sebagai pendukung keputusan, bukan pengganti validasi lapangan."
+        ],
+        "created_at": "2026-05-27 - fixed evaluation package",
+        "uas_notes": {
+            "status": "Final UAS Machine Learning - fixed normal metrics",
+            "smart_city_pillar": "Smart Living / Smart Governance",
+            "application": "Streamlit bonus dengan input, prediksi, dataset, visualisasi, login admin, dan upload CSV."
+        }
+    },
+    "trend_by_year": [
+        {
+            "tahun": 2018,
+            "rata_rata_kemiskinan": 7.45,
+            "rata_rata_target": 7.447500000000001,
+            "rata_rata_gini": 0.40599999999999997,
+            "rata_rata_tpt": 8.105,
+            "rata_rata_ipm": 71.26722222222222
+        },
+        {
+            "tahun": 2019,
+            "rata_rata_kemiskinan": 6.91,
+            "rata_rata_target": 6.9144907407407405,
+            "rata_rata_gini": 0.4,
+            "rata_rata_tpt": 7.934999999999999,
+            "rata_rata_ipm": 71.91666666666667
+        },
+        {
+            "tahun": 2020,
+            "rata_rata_kemiskinan": 7.88,
+            "rata_rata_target": 7.880740740740741,
+            "rata_rata_gini": 0.4005,
+            "rata_rata_tpt": 9.770000000000001,
+            "rata_rata_ipm": 71.91388888888889
+        },
+        {
+            "tahun": 2021,
+            "rata_rata_kemiskinan": 8.04,
+            "rata_rata_target": 8.040092592592591,
+            "rata_rata_gini": 0.409,
+            "rata_rata_tpt": 8.795,
+            "rata_rata_ipm": 72.23462962962964
+        },
+        {
+            "tahun": 2022,
+            "rata_rata_kemiskinan": 8.06,
+            "rata_rata_target": 8.057962962962964,
+            "rata_rata_gini": 0.4145,
+            "rata_rata_tpt": 7.545,
+            "rata_rata_ipm": 72.89537037037037
+        },
+        {
+            "tahun": 2023,
+            "rata_rata_kemiskinan": 7.62,
+            "rata_rata_target": 7.619259259259259,
+            "rata_rata_gini": 0.425,
+            "rata_rata_tpt": 6.785,
+            "rata_rata_ipm": 73.55425925925925
+        },
+        {
+            "tahun": 2024,
+            "rata_rata_kemiskinan": 7.460000000000001,
+            "rata_rata_target": 7.460000000000001,
+            "rata_rata_gini": 0.4244837209302325,
+            "rata_rata_tpt": 6.412651162790698,
+            "rata_rata_ipm": 74.1566046511628
+        }
+    ],
+    "priority_distribution": [
+        {
+            "priority": "Low Priority",
+            "count": 647
+        },
+        {
+            "priority": "High Priority",
+            "count": 432
+        },
+        {
+            "priority": "Medium Priority",
+            "count": 428
+        }
+    ],
+    "feature_importance": [
+        {
+            "feature": "rata_rata_inflasi_tahunan",
+            "importance": 0.9231835002107238
+        },
+        {
+            "feature": "tingkat_penganggur_terbuka",
+            "importance": 0.05821102095729422
+        },
+        {
+            "feature": "gini_ratio",
+            "importance": 0.016449049893869933
+        },
+        {
+            "feature": "indeks_pembangunan_manusia",
+            "importance": 0.0021564289381120496
+        }
+    ],
+    "regression_metrics": [
+        {
+            "model": "RandomForestRegressor",
+            "r2_score": 0.9583563517123204,
+            "mae": 0.04885804822142923,
+            "rmse": 0.07869105041101396
+        },
+        {
+            "model": "SVR",
+            "r2_score": 0.9238663183193218,
+            "mae": 0.07167284626287794,
+            "rmse": 0.10639944769252704
+        },
+        {
+            "model": "Polynomial Regression",
+            "r2_score": 0.6062650762352515,
+            "mae": 0.18354753148916758,
+            "rmse": 0.2419652096427505
+        }
+    ],
+    "classification_metrics": [
+        {
+            "model": "SVC",
+            "accuracy": 0.9006622516556292,
+            "precision_weighted": 0.9175153505110654,
+            "recall_weighted": 0.9006622516556292,
+            "f1_weighted": 0.8956706627788306
+        },
+        {
+            "model": "RandomForestClassifier",
+            "accuracy": 0.7880794701986755,
+            "precision_weighted": 0.8551556656944039,
+            "recall_weighted": 0.7880794701986755,
+            "f1_weighted": 0.7823555836486167
+        },
+        {
+            "model": "LogisticRegression",
+            "accuracy": 0.6578366445916115,
+            "precision_weighted": 0.669805526807204,
+            "recall_weighted": 0.6578366445916115,
+            "f1_weighted": 0.6211911647464383
+        }
+    ]
+}

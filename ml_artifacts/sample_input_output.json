@@ -1,0 +1,41 @@
+{
+    "input": {
+        "tahun": 2026.0,
+        "gini_ratio": 0.42,
+        "tingkat_penganggur_terbuka": 6.7,
+        "rata_rata_inflasi_tahunan": 3.1,
+        "indeks_pembangunan_manusia": 73.5
+    },
+    "output": {
+        "prediksi_kemiskinan": 7.977,
+        "priority_level": "High Priority",
+        "recommendation": {
+            "status": "Risiko tinggi",
+            "main_recommendation": "Prioritaskan intervensi sosial-ekonomi intensif dan bantuan segera.",
+            "reason": [
+                "Prediksi kemiskinan masuk kelompok risiko tinggi berdasarkan threshold dataset.",
+                "Dibutuhkan respons cepat dan program pemulihan berkelanjutan."
+            ],
+            "policy_actions": [
+                "Bantuan sosial segera bagi kelompok miskin dan rentan",
+                "Bantuan pangan dan stabilisasi harga kebutuhan pokok",
+                "Program padat karya serta perluasan penyerapan tenaga kerja",
+                "Peningkatan akses pendidikan dan kesehatan"
+            ],
+            "timeline": {
+                "0-3 bulan": [
+                    "Bantuan sosial segera",
+                    "Stabilisasi harga pangan"
+                ],
+                "3-12 bulan": [
+                    "Program padat karya",
+                    "Pelatihan kerja dan modal produktif"
+                ],
+                "1-3 tahun": [
+                    "Peningkatan IPM",
+                    "Pengurangan ketimpangan struktural"
+                ]
+            }
+        }
+    }
+}

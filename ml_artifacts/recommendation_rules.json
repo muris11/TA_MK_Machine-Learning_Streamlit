@@ -1,0 +1,81 @@
+{
+    "Low Priority": {
+        "status": "Risiko rendah",
+        "main_recommendation": "Pertahankan program sosial berjalan dan lakukan monitoring berkala.",
+        "reason": [
+            "Prediksi kemiskinan masuk kelompok risiko rendah berdasarkan threshold dataset.",
+            "Fokus kebijakan diarahkan pada pemeliharaan capaian dan pencegahan peningkatan risiko."
+        ],
+        "policy_actions": [
+            "Monitoring indikator sosial ekonomi setiap semester",
+            "Mempertahankan bantuan sosial yang terbukti efektif",
+            "Mendorong pemberdayaan ekonomi lokal dan UMKM"
+        ],
+        "timeline": {
+            "0-3 bulan": [
+                "Evaluasi indikator terbaru dan validasi kelompok rentan"
+            ],
+            "3-12 bulan": [
+                "Penguatan program ekonomi produktif"
+            ],
+            "1-3 tahun": [
+                "Peningkatan kualitas SDM dan daya saing ekonomi lokal"
+            ]
+        }
+    },
+    "Medium Priority": {
+        "status": "Risiko sedang",
+        "main_recommendation": "Lakukan intervensi pencegahan agar risiko kemiskinan tidak meningkat.",
+        "reason": [
+            "Prediksi kemiskinan masuk kelompok risiko menengah berdasarkan threshold dataset.",
+            "Kondisi memerlukan pencegahan dan pemantauan lebih sering."
+        ],
+        "policy_actions": [
+            "Pelatihan kerja dan job matching untuk kelompok rentan",
+            "Penguatan UMKM serta akses modal mikro",
+            "Stabilisasi harga kebutuhan pokok",
+            "Subsidi yang tervalidasi dan tepat sasaran"
+        ],
+        "timeline": {
+            "0-3 bulan": [
+                "Identifikasi wilayah rentan",
+                "Validasi penerima bantuan"
+            ],
+            "3-12 bulan": [
+                "Pelatihan kerja",
+                "Bantuan usaha produktif"
+            ],
+            "1-3 tahun": [
+                "Penguatan pendidikan, kesehatan, dan kesempatan kerja"
+            ]
+        }
+    },
+    "High Priority": {
+        "status": "Risiko tinggi",
+        "main_recommendation": "Prioritaskan intervensi sosial-ekonomi intensif dan bantuan segera.",
+        "reason": [
+            "Prediksi kemiskinan masuk kelompok risiko tinggi berdasarkan threshold dataset.",
+            "Dibutuhkan respons cepat dan program pemulihan berkelanjutan."
+        ],
+        "policy_actions": [
+            "Bantuan sosial segera bagi kelompok miskin dan rentan",
+            "Bantuan pangan dan stabilisasi harga kebutuhan pokok",
+            "Program padat karya serta perluasan penyerapan tenaga kerja",
+            "Peningkatan akses pendidikan dan kesehatan"
+        ],
+        "timeline": {
+            "0-3 bulan": [
+                "Bantuan sosial segera",
+                "Stabilisasi harga pangan"
+            ],
+            "3-12 bulan": [
+                "Program padat karya",
+                "Pelatihan kerja dan modal produktif"
+            ],
+            "1-3 tahun": [
+                "Peningkatan IPM",
+                "Pengurangan ketimpangan struktural"
+            ]
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "project_title": "Prediksi Kondisi Sosial Provinsi Jawa Barat",
+    "model_type": "Supervised Learning",
+    "tasks": {
+        "regression": "Prediksi persentase kemiskinan",
+        "classification": "Klasifikasi prioritas intervensi sosial"
+    },
+    "best_models": {
+        "regression": "RandomForestRegressor",
+        "classification": "SVC"
+    },
+    "metrics": {
+        "r2_score": 0.9583563517123204,
+        "mae": 0.04885804822142923,
+        "rmse": 0.07869105041101396,
+        "classification_accuracy": 0.9006622516556292,
+        "precision_weighted": 0.9175153505110654,
+        "recall_weighted": 0.9006622516556292,
+        "f1_weighted": 0.8956706627788306
+    },
+    "feature_columns": [
+        "gini_ratio",
+        "tingkat_penganggur_terbuka",
+        "rata_rata_inflasi_tahunan",
+        "indeks_pembangunan_manusia"
+    ],
+    "priority_thresholds": {
+        "low_threshold": 7.46,
+        "high_threshold": 7.88
+    },
+    "dataset_summary": {
+        "raw_rows": 1511,
+        "clean_rows": 1511,
+        "modeling_rows_after_dedup": 1507,
+        "test_rows": 453,
+        "latest_year": 2024
+    },
+    "preprocessing_improvement": [
+        "Mengubah nilai numerik yang salah terbaca sebagai tanggal menjadi angka desimal.",
+        "Menskalakan nilai inflasi dan gini ratio yang salah format.",
+        "Menghapus duplikasi fitur-target sebelum train-test split untuk mengurangi data leakage.",
+        "Membatasi kompleksitas Random Forest agar hasil evaluasi lebih realistis dan tidak 1.0000."
+    ],
+    "limitations": [
+        "Dataset bersifat agregat dan beberapa target masih berulang pada banyak observasi.",
+        "Model digunakan sebagai pendukung keputusan, bukan pengganti validasi lapangan."
+    ],
+    "created_at": "2026-05-27 - fixed evaluation package",
+    "uas_notes": {
+        "status": "Final UAS Machine Learning - fixed normal metrics",
+        "smart_city_pillar": "Smart Living / Smart Governance",
+        "application": "Streamlit bonus dengan input, prediksi, dataset, visualisasi, login admin, dan upload CSV."
+    }
+}

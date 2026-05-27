@@ -1,0 +1,9 @@
+PASTE LINK SEBELUM SUBMIT
+
+Link Colab   : [PASTE_LINK_COLAB_DI_SINI]
+Link YouTube : [PASTE_LINK_YOUTUBE_DI_SINI]
+
+Catatan:
+- Link Colab wajib dimasukkan ke laporan PDF.
+- Link YouTube wajib dikirim ke Grup Signal, dimasukkan ke laporan PDF, dan dicantumkan di slide.
+- Video 5-10 menit, public, suara jelas, wajah tampil minimal di pembukaan atau penutupan.
